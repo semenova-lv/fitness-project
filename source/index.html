@@ -12,7 +12,7 @@
   <header class="page-header" data-test="hero">
     <div class="page-header__wrapper">
       <div class="logo">
-        <img src="img/logo.svg" width="100" height="20" alt="Логотип фитнес центра SUPERGYM">
+        <img src="img/logo-supergym.svg" width="100" height="20" alt="Логотип фитнес центра SUPERGYM">
       </div>
       <a href="tel:88005555555">8 800 555-55-55</a>
     </div>
@@ -28,7 +28,12 @@
         <a href="#price">Купить абонемент</a>
       </div>
       <div class="hero__image">
-        <img src="img/hero-img-descktop.jpg" width="500" height="524" alt="Фото спортивного мужчины">
+        <picture>
+          <source media="(min-width: 1366px)" width="500" height="524" type="image/webp" srcset="img/hero-image-desktop@1x.webp 1x, img/hero-image-desktop@2x.webp 2x">
+          <source width="324" height="390" type="image/webp" srcset="img/hero-image-tablet@1x.webp 1x, img/hero-image-tablet@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="500" height="524" type="image/jpeg" srcset="img/hero-image-desktop@1x.jpg 1x, img/hero-image-desktop@2x.jpg 2x">
+          <img src="img/hero-image-tablet@1x.jpg" srcset="img/hero-image-tablet@2x.jpg 2x" width="324" height="390" alt="Фото спортивного мужчины">
+        </picture>
       </div>
     </section>
   </header>
@@ -40,10 +45,24 @@
         <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
       </div>
       <div class="about__illustration">
-        <img src="img/main-img-desktop.jpg" width="660" height="400" alt="Фото тренажерного зала">
+        <picture>
+          <source media="(min-width: 1366px)" width="660" height="400" type="image/webp" srcset="img/about-image-desktop@1x.webp 1x, img/about-image-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" width="678" height="345" type="image/webp" srcset="img/about-image-tabletp@1x.webp 1x, img/about-image-tablet@2x.webp 2x">
+          <source width="320" height="280" type="image/webp" srcset="img/about-image-mobile@1x.webp 1x, img/about-image-mobile@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="660" height="400" type="image/jpeg" srcset="img/about-image-desktop@1x.jpg 1x, img/about-image-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="678" height="345" type="image/jpeg" srcset="img/about-image-tablet@1x.jpg 1x, img/about-image-tablet@2x.jpg 2x">
+          <img src="img/about-image-mobile@1x.jpg" srcset="img/about-image-mobile@2x.jpg 2x" width="320" height="280" alt="Фото тренажерного зала">
+        </picture>
       </div>
       <div class="about__video video">
-        <img class="video__media" src="img/video-img-desktop.jpg" width="360" height="230" alt="Заставка видео из тренажерного зала">
+        <picture>
+          <source media="(min-width: 1366px)" width="360" height="230" type="image/webp" srcset="img/about-video-desktop@1x.webp 1x, img/about-video-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" width="270" height="170" type="image/webp" srcset="img/about-video-tabletp@1x.webp 1x, img/about-video-tablet@2x.webp 2x">
+          <source width="320" height="170" type="image/webp" srcset="img/about-video-mobile@1x.webp 1x, img/about-video-mobile@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="360" height="230" type="image/jpeg" srcset="img/about-video-desktop@1x.jpg 1x, img/about-video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="270" height="170" type="image/jpeg" srcset="img/about-video-tablet@1x.jpg 1x, img/about-video-tablet@2x.jpg 2x">
+          <img src="img/about-video-mobile@1x.jpg" srcset="img/about-video-mobile@2x.jpg 2x" width="320" height="170" alt="Заставка видео из тренажерного зала">
+        </picture>
         <button class="video__button" type="button" aria-label="Запустить видео"></button>
       </div>
     </section>
@@ -107,7 +126,14 @@
         <a href="#">заполнить заявку</a>
       </div>
       <div class="games__image">
-        <img src="img/img-games-desktop.jpg" width="660" height="500" alt="Настроенный на победу участник">
+        <picture>
+          <source media="(min-width: 1366px)" width="660" height="500" type="image/webp" srcset="img/games-image-desktop@1x.webp 1x, img/games-image-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" width="378" height="348" type="image/webp" srcset="img/games-image-tabletp@1x.webp 1x, img/games-image-tablet@2x.webp 2x">
+          <source width="290" height="290" type="image/webp" srcset="img/games-image-mobile@1x.webp 1x, img/games-image-mobile@2x.webp 2x">
+          <source media="(min-width: 1366px)" width="660" height="500" type="image/jpeg" srcset="img/games-image-desktop@1x.jpg 1x, img/games-image-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" width="378" height="348" type="image/jpeg" srcset="img/games-image-tablet@1x.jpg 1x, img/games-image-tablet@2x.jpg 2x">
+          <img src="img/games-image-mobile@1x.jpg" srcset="img/games-image-mobile@2x.jpg 2x" width="290" height="290" alt="Настроенный на победу участник">
+        </picture>
       </div>
     </section>
     <section class="juri" data-test="juri">
@@ -116,7 +142,10 @@
         <ul>
           <li>
             <figure>
-              <img src="img/foto-pavlova.jpg" width="260" height="300" alt="Фото тренара Анна Павлова">
+              <picture>
+                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pavlova@1x.webp 1x, img/juri-foto-pavlova@2x.webp 2x">
+                <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой">
+              </picture>
               <figcaption>Анна Павлова</figcaption>
             </figure>
             <div>
@@ -131,7 +160,10 @@
           </li>
           <li>
             <figure>
-              <img src="img/foto-lavrov.jpg" width="260" height="300" alt="Фото тренера Алексея Лаврова">
+              <picture>
+                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-lavrov@1x.webp 1x, img/juri-foto-lavrov@2x.webp 2x">
+                <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова">
+              </picture>
               <figcaption>Алексей Лавров</figcaption>
             </figure>
             <div>
@@ -146,7 +178,10 @@
           </li>
           <li>
             <figure>
-              <img src="img/foto-pashkov.jpg" width="260" height="300" alt="Фото тренера Александра Пашкова">
+              <picture>
+                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pashkov@1x.webp 1x, img/juri-foto-pashkov@2x.webp 2x">
+                <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова">
+              </picture>
               <figcaption>Александр Пашков</figcaption>
             </figure>
             <div>
@@ -161,7 +196,10 @@
           </li>
           <li>
             <figure>
-              <img src="img/foto-ketova.jpg" width="260" height="300" alt="Фото тренера Марии Кетовой">
+              <picture>
+                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-ketova@1x.webp 1x, img/juri-foto-ketova@2x.webp 2x">
+                <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой">
+              </picture>
               <figcaption>Мария Кетова</figcaption>
             </figure>
             <div>
@@ -223,7 +261,14 @@
             <a href="#">подробнее</a>
           </div>
           <div class="offers__image">
-            <img src="img/offers-img-desktop.jpg" width="400" height="462" alt="Фото стройной девушки">
+            <picture>
+              <source media="(min-width: 1366px)" width="280" height="460" type="image/webp" srcset="img/offers-image-desktop@1x.webp 1x, img/offers-image-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="400" height="462" type="image/webp" srcset="img/offers-image-tabletp@1x.webp 1x, img/offers-image-tablet@2x.webp 2x">
+              <source width="320" height="360" type="image/webp" srcset="img/offers-image-mobile@1x.webp 1x, img/offers-image-mobile@2x.webp 2x">
+              <source media="(min-width: 1366px)" width="280" height="460" type="image/jpeg" srcset="img/offers-image-desktop@1x.jpg 1x, img/offers-image-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-image-tablet@1x.jpg 1x, img/offers-image-tablet@2x.jpg 2x">
+              <img src="img/offers-image-mobile@1x.jpg" srcset="img/offers-image-mobile@2x.jpg 2x" width="320" height="360" alt="Фото спортивной девушки">
+            </picture>
           </div>
         </div>
         <div class="offers__item">
@@ -287,7 +332,7 @@
           <ul>
             <li>
               <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
-              <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели  и предложит программу питания.</p>
+              <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
             </li>
             <li>
               <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
@@ -384,7 +429,7 @@
   </main>
   <footer class="page-footer" data-test="footer">
     <div class="logo">
-      <img src="img/logo.svg" width="100" height="20" alt="Логотип фитнес центра SUPERGYM">
+      <img src="img/logo-supergym.svg" width="100" height="20" alt="Логотип фитнес центра SUPERGYM">
     </div>
     <nav class="site-navigation">
       <ul>
