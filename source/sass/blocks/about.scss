@@ -1,0 +1,135 @@
+.about {
+  padding-block: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 60px 35px;
+    padding-inline: calc((100% - 678px) / 2);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 120px 125px;
+    padding-inline: 103px;
+    display: grid;
+    grid-template-columns: 355px 660px;
+    column-gap: 145px;
+  }
+}
+
+.about__information {
+  margin-bottom: 36px;
+  padding-inline: calc((100% - 290px) / 2);
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    padding-inline: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    grid-column: 1 / 2;
+    text-align: start;
+  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 36px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 95px;
+  }
+}
+
+.about__content {
+  @media (min-width: $tablet-width) {
+    max-width: 502px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    max-width: 355px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  p:last-child {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.about__illustration {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    height: 345px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+    grid-column: 2 / 3;
+  }
+}
+
+.about__illustration img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about__video {
+  width: 100%;
+  min-height: 170px;
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+    margin: 0 auto;
+    margin-top: -85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / -1;
+    width: 360px;
+    height: 230px;
+    margin-top: -115px;
+  }
+}
+
+.about__video img {
+  width: 100%;
+  object-fit: cover;
+}

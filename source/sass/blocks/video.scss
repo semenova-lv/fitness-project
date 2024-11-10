@@ -1,0 +1,128 @@
+.video {
+  position: relative;
+}
+
+.video__ilustration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 54, 122, 0.5);
+  }
+}
+
+.video__button {
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 72px;
+  height: 72px;
+  z-index: 3;
+  border-radius: 50%;
+
+  border: 2px solid rgba(237, 2, 51, 0.2);
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
+
+  &::before {
+    grid-area: 1 / 1;
+    content: "";
+    display: block;
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border-radius: 50%;
+
+    @media (min-width: $desktop-width) {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &::after {
+    grid-area: 1 / 1;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: $white;
+
+    mask-image: url("/__spritemap#sprite-icon-play-view");
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &:not(:disabled):hover {
+    border-color: rgba(16, 38, 84, 0.6);
+  }
+
+  &:not(:disabled):hover::before {
+    background-color: $white;
+    background-image: none;
+  }
+
+  &:not(:disabled):hover::after {
+    background-color: rgba(16, 38, 84, 0.6);
+  }
+
+  &:not(:disabled):focus-visible {
+    border-color: $basic-primary;
+  }
+
+  &:not(:disabled):focus-visible::before {
+    background-color: #c8c9cc;
+    background-image: none;
+  }
+
+  &:not(:disabled):focus-visible::after {
+    background-color: $basic-primary;
+  }
+
+  &:not(:disabled):active {
+    border-color: $basic-primary;
+  }
+
+  &:not(:disabled):active::before {
+    background-color: $white;
+    background-image: none;
+  }
+
+  &:not(:disabled):active::after {
+    background-color: $basic-primary;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+}

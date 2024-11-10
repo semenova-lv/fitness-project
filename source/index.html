@@ -40,9 +40,12 @@
   <main>
     <section class="about" data-test="about">
       <div class="about__information">
-        <h2>Тренажёрный зал</h2>
-        <p>Просторный зал площадью 900 кв/м</p>
-        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+        <h2 class="about__title title title--secondary">Тренажёрный зал</h2>
+        <p class="about__text">Просторный зал площадью 900 кв/м</p>
+        <div class="about__content">
+          <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+          <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+        </div>
       </div>
       <div class="about__illustration">
         <picture>
@@ -55,14 +58,17 @@
         </picture>
       </div>
       <div class="about__video video">
-        <picture>
-          <source media="(min-width: 1366px)" width="360" height="230" type="image/webp" srcset="img/about-video-desktop@1x.webp 1x, img/about-video-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" width="270" height="170" type="image/webp" srcset="img/about-video-tabletp@1x.webp 1x, img/about-video-tablet@2x.webp 2x">
-          <source width="320" height="170" type="image/webp" srcset="img/about-video-mobile@1x.webp 1x, img/about-video-mobile@2x.webp 2x">
-          <source media="(min-width: 1366px)" width="360" height="230" type="image/jpeg" srcset="img/about-video-desktop@1x.jpg 1x, img/about-video-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" width="270" height="170" type="image/jpeg" srcset="img/about-video-tablet@1x.jpg 1x, img/about-video-tablet@2x.jpg 2x">
-          <img src="img/about-video-mobile@1x.jpg" srcset="img/about-video-mobile@2x.jpg 2x" width="320" height="170" alt="Заставка видео из тренажерного зала">
-        </picture>
+        <div class="video__ilustration">
+          <picture>
+            <source media="(min-width: 1366px)" width="360" height="230" type="image/webp" srcset="img/about-video-desktop@1x.webp 1x, img/about-video-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="270" height="170" type="image/webp" srcset="img/about-video-tabletp@1x.webp 1x, img/about-video-tablet@2x.webp 2x">
+            <source width="320" height="170" type="image/webp" srcset="img/about-video-mobile@1x.webp 1x, img/about-video-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" width="360" height="230" type="image/jpeg" srcset="img/about-video-desktop@1x.jpg 1x, img/about-video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="270" height="170" type="image/jpeg" srcset="img/about-video-tablet@1x.jpg 1x, img/about-video-tablet@2x.jpg 2x">
+            <img src="img/about-video-mobile@1x.jpg" srcset="img/about-video-mobile@2x.jpg 2x" width="320" height="170" alt="Заставка видео из тренажерного зала">
+          </picture>
+        </div>
+
         <button class="video__button" type="button" aria-label="Запустить видео"></button>
       </div>
     </section>
