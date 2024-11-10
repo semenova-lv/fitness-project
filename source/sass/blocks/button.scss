@@ -1,0 +1,22 @@
+.button {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+
+  &--primary {
+    padding: 22px;
+    border: 2px solid $white;
+
+    @media (min-width: $tablet-width) {
+      padding: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 25px;
+    }
+  }
+}
