@@ -9,6 +9,7 @@
   @media (min-width: $desktop-width) {
     padding-block: 120px 125px;
     padding-inline: 103px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 355px 660px;
     column-gap: 145px;
@@ -63,6 +64,10 @@
 }
 
 .about__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
   @media (min-width: $tablet-width) {
     max-width: 502px;
     margin: 0 auto;
@@ -75,10 +80,6 @@
 
   p {
     margin: 0;
-  }
-
-  p:not(:last-child) {
-    margin-bottom: 8px;
   }
 
   p:last-child {

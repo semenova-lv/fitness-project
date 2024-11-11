@@ -19,4 +19,9 @@
       padding: 25px;
     }
   }
+
+  &--secondary {
+    padding: 25px;
+    border: 2px solid $basic-primary;
+  }
 }

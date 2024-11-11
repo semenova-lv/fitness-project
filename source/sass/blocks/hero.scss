@@ -1,5 +1,5 @@
 .hero {
-  padding-block: 49px 32px;
+  padding-block: 48px 32px;
 
   @media (min-width: $tablet-width) {
     padding-block: 0 100px;
@@ -64,6 +64,7 @@
   text-align: end;
 
   @media (min-width: $tablet-width) {
+    font-size: 14px;
     grid-row: 1 / 4;
     align-self: center;
     line-height: 22px;
@@ -72,7 +73,7 @@
 
 .hero__button {
   grid-column: 1 / -1;
-  margin-top: 47px;
+  margin-top: 48px;
 
   @media (min-width: $tablet-width) {
     margin-top: 50px;

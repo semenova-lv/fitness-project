@@ -50,7 +50,7 @@
       <div class="about__illustration">
         <picture>
           <source media="(min-width: 1366px)" width="660" height="400" type="image/webp" srcset="img/about-image-desktop@1x.webp 1x, img/about-image-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" width="678" height="345" type="image/webp" srcset="img/about-image-tabletp@1x.webp 1x, img/about-image-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" width="678" height="345" type="image/webp" srcset="img/about-image-tablet@1x.webp 1x, img/about-image-tablet@2x.webp 2x">
           <source width="320" height="280" type="image/webp" srcset="img/about-image-mobile@1x.webp 1x, img/about-image-mobile@2x.webp 2x">
           <source media="(min-width: 1366px)" width="660" height="400" type="image/jpeg" srcset="img/about-image-desktop@1x.jpg 1x, img/about-image-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" width="678" height="345" type="image/jpeg" srcset="img/about-image-tablet@1x.jpg 1x, img/about-image-tablet@2x.jpg 2x">
@@ -61,7 +61,7 @@
         <div class="video__ilustration">
           <picture>
             <source media="(min-width: 1366px)" width="360" height="230" type="image/webp" srcset="img/about-video-desktop@1x.webp 1x, img/about-video-desktop@2x.webp 2x">
-            <source media="(min-width: 768px)" width="270" height="170" type="image/webp" srcset="img/about-video-tabletp@1x.webp 1x, img/about-video-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" width="270" height="170" type="image/webp" srcset="img/about-video-tablet@1x.webp 1x, img/about-video-tablet@2x.webp 2x">
             <source width="320" height="170" type="image/webp" srcset="img/about-video-mobile@1x.webp 1x, img/about-video-mobile@2x.webp 2x">
             <source media="(min-width: 1366px)" width="360" height="230" type="image/jpeg" srcset="img/about-video-desktop@1x.jpg 1x, img/about-video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" width="270" height="170" type="image/jpeg" srcset="img/about-video-tablet@1x.jpg 1x, img/about-video-tablet@2x.jpg 2x">
@@ -73,42 +73,108 @@
       </div>
     </section>
     <section class="price" id="price" data-test="price">
-      <h2>Абонементы</h2>
-      <div class="tabs">
-        <ul class="tabs__nabigation">
-          <li>1 месяц</li>
-          <li>6 месяцев</li>
-          <li>12 месяцев</li>
-        </ul>
-        <ul>
-          <li>
-            <h3>С тренером</h3>
-            <p>12 занятий</p>
-            <p>
-              5000
-              <span aria-hidden="true">5000</span>
-            </p>
-            <a href="#">Купить абонемент</a>
+      <div class="price__wrapper container">
+        <h2 class="price__title title title--secondary">Абонементы</h2>
+        <ul class="price__filter-list">
+          <li class="price__filter-item">
+            <a class="price__filter-link price__filter-link--current" href="#">1 месяц</a>
           </li>
-          <li>
-            <h3>Дневной</h3>
-            <p>с 8:00 до 17:00</p>
-            <p>
-              1700
-              <span aria-hidden="true">1700</span>
-            </p>
-            <a href="#">Купить абонемент</a>
+          <li class="price__filter-item">
+            <a class="price__filter-link" href="#">6 месяцев</a>
           </li>
-          <li>
-            <h3>Полный день</h3>
-            <p>с 8:00 до 22:00</p>
-            <p>
-              2700
-              <span aria-hidden="true">2700</span>
-            </p>
-            <a href="#">Купить абонемент</a>
+          <li class="price__filter-item">
+            <a class="price__filter-link" href="#">12 месяцев</a>
           </li>
         </ul>
+        <div class="price__content">
+          <ul class="price__product-list price__product-list--show">
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">С тренером</h3>
+              <p class="card-product__information">12 занятий</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">5000</p>
+                <span aria-hidden="true">5000</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">Дневной</h3>
+              <p class="card-product__information">с 8:00 до 17:00</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">1700</p>
+                <span aria-hidden="true">1700</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">Полный день</h3>
+              <p class="card-product__information">с 8:00 до 22:00</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">2700</p>
+                <span aria-hidden="true">2700</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="price__product-list">
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">С тренером</h3>
+              <p class="card-product__information">12 занятий</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">30000</p>
+                <span aria-hidden="true">30000</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">Дневной</h3>
+              <p class="card-product__information">с 8:00 до 17:00</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">10200</p>
+                <span aria-hidden="true">10200</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">Полный день</h3>
+              <p class="card-product__information">с 8:00 до 22:00</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">16200</p>
+                <span aria-hidden="true">16200</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="price__product-list">
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">С тренером</h3>
+              <p class="card-product__information">12 занятий</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">60000</p>
+                <span aria-hidden="true">60000</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">Дневной</h3>
+              <p class="card-product__information">с 8:00 до 17:00</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">20400</p>
+                <span aria-hidden="true">20400</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+            <li class="price__product-item card-product">
+              <h3 class="card-product__title">Полный день</h3>
+              <p class="card-product__information">с 8:00 до 22:00</p>
+              <div class="card-product__price-wrapper">
+                <p class="card-product__price">32400</p>
+                <span aria-hidden="true">32400</span>
+              </div>
+              <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
     </section>
@@ -134,7 +200,7 @@
       <div class="games__image">
         <picture>
           <source media="(min-width: 1366px)" width="660" height="500" type="image/webp" srcset="img/games-image-desktop@1x.webp 1x, img/games-image-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" width="378" height="348" type="image/webp" srcset="img/games-image-tabletp@1x.webp 1x, img/games-image-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)" width="378" height="348" type="image/webp" srcset="img/games-image-tablet@1x.webp 1x, img/games-image-tablet@2x.webp 2x">
           <source width="290" height="290" type="image/webp" srcset="img/games-image-mobile@1x.webp 1x, img/games-image-mobile@2x.webp 2x">
           <source media="(min-width: 1366px)" width="660" height="500" type="image/jpeg" srcset="img/games-image-desktop@1x.jpg 1x, img/games-image-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" width="378" height="348" type="image/jpeg" srcset="img/games-image-tablet@1x.jpg 1x, img/games-image-tablet@2x.jpg 2x">
@@ -269,7 +335,7 @@
           <div class="offers__image">
             <picture>
               <source media="(min-width: 1366px)" width="280" height="460" type="image/webp" srcset="img/offers-image-desktop@1x.webp 1x, img/offers-image-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" width="400" height="462" type="image/webp" srcset="img/offers-image-tabletp@1x.webp 1x, img/offers-image-tablet@2x.webp 2x">
+              <source media="(min-width: 768px)" width="400" height="462" type="image/webp" srcset="img/offers-image-tablet@1x.webp 1x, img/offers-image-tablet@2x.webp 2x">
               <source width="320" height="360" type="image/webp" srcset="img/offers-image-mobile@1x.webp 1x, img/offers-image-mobile@2x.webp 2x">
               <source media="(min-width: 1366px)" width="280" height="460" type="image/jpeg" srcset="img/offers-image-desktop@1x.jpg 1x, img/offers-image-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-image-tablet@1x.jpg 1x, img/offers-image-tablet@2x.jpg 2x">
