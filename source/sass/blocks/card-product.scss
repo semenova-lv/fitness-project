@@ -1,0 +1,96 @@
+.card-product {
+  padding: 50px 42px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px;
+    row-gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 230px;
+    row-gap: 17px;
+  }
+}
+
+.card-product__title {
+  margin: 0;
+  font-size: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.card-product__information {
+  margin: 0;
+}
+
+.card-product__price-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: end;
+}
+
+.card-product__price {
+  margin: 0;
+  color: $text-accent;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  grid-area: 1 / 1;
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 90px;
+    column-gap: 14px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 33px;
+    background-image: url("/__spritemap#sprite-icon-rub-view");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 42px;
+    }
+  }
+}
+
+.card-product__price-wrapper span {
+  grid-area: 1 / 1;
+  color: rgba(232, 232, 232, 0.48);
+  font-size: 80px;
+  line-height: 120px;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+    line-height: 150px;
+  }
+}
+
+// .card-product__button {
+
+// }
