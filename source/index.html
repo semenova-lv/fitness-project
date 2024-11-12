@@ -27,7 +27,7 @@
         </ul>
         <a class="hero__button button button--primary" href="#price">Купить абонемент</a>
       </div>
-      <div class="hero__image">
+      <div class="hero__illustration">
         <picture>
           <source media="(min-width: 1366px)" width="500" height="524" type="image/webp" srcset="img/hero-image-desktop@1x.webp 1x, img/hero-image-desktop@2x.webp 2x">
           <source width="324" height="390" type="image/webp" srcset="img/hero-image-tablet@1x.webp 1x, img/hero-image-tablet@2x.webp 2x">
@@ -178,35 +178,38 @@
       </div>
 
     </section>
-    <section class="games" data-test="games">
-      <div class="games__information">
-        <p>SUPER GAMES</p>
-        <h2>Ежегодные соревнования по CrossFit</h2>
-        <dl>
-          <div>
-            <dt>Дата</dt>
-            <dd>
-              <span>7</span>
-              <span>Марта 2019</span>
-            </dd>
-          </div>
-          <div>
-            <dt>Время</dt>
-            <dd>12:00</dd>
-          </div>
-        </dl>
-        <a href="#">заполнить заявку</a>
+    <section class="games container" data-test="games">
+      <div class="games__wrapper">
+        <div class="games__information">
+          <h2 class="games__title">SUPER GAMES</h2>
+          <dl class="games__information-list">
+            <div class="games__information-item">
+              <dt class="games__information-subtitle">Дата</dt>
+              <dd class="games__information-value">
+                7
+                <span>Марта 2019</span>
+              </dd>
+            </div>
+            <div class="games__information-item">
+              <dt class="games__information-subtitle">Время</dt>
+              <dd class="games__information-value">12:00</dd>
+            </div>
+          </dl>
+          <p class="games__description">Ежегодные соревнования по CrossFit</p>
+          <a class="games__button button button--primary" href="#">заполнить заявку</a>
+        </div>
+        <div class="games__illustration">
+          <picture>
+            <source media="(min-width: 1366px)" width="660" height="500" type="image/webp" srcset="img/games-image-desktop@1x.webp 1x, img/games-image-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="378" height="348" type="image/webp" srcset="img/games-image-tablet@1x.webp 1x, img/games-image-tablet@2x.webp 2x">
+            <source width="290" height="290" type="image/webp" srcset="img/games-image-mobile@1x.webp 1x, img/games-image-mobile@2x.webp 2x">
+            <source media="(min-width: 1366px)" width="660" height="500" type="image/jpeg" srcset="img/games-image-desktop@1x.jpg 1x, img/games-image-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="378" height="348" type="image/jpeg" srcset="img/games-image-tablet@1x.jpg 1x, img/games-image-tablet@2x.jpg 2x">
+            <img src="img/games-image-mobile@1x.jpg" srcset="img/games-image-mobile@2x.jpg 2x" width="290" height="290" alt="Настроенный на победу участник">
+          </picture>
+        </div>
       </div>
-      <div class="games__image">
-        <picture>
-          <source media="(min-width: 1366px)" width="660" height="500" type="image/webp" srcset="img/games-image-desktop@1x.webp 1x, img/games-image-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" width="378" height="348" type="image/webp" srcset="img/games-image-tablet@1x.webp 1x, img/games-image-tablet@2x.webp 2x">
-          <source width="290" height="290" type="image/webp" srcset="img/games-image-mobile@1x.webp 1x, img/games-image-mobile@2x.webp 2x">
-          <source media="(min-width: 1366px)" width="660" height="500" type="image/jpeg" srcset="img/games-image-desktop@1x.jpg 1x, img/games-image-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" width="378" height="348" type="image/jpeg" srcset="img/games-image-tablet@1x.jpg 1x, img/games-image-tablet@2x.jpg 2x">
-          <img src="img/games-image-mobile@1x.jpg" srcset="img/games-image-mobile@2x.jpg 2x" width="290" height="290" alt="Настроенный на победу участник">
-        </picture>
-      </div>
+
     </section>
     <section class="juri" data-test="juri">
       <h2>Жюри</h2>
@@ -332,7 +335,7 @@
             <p>Безлимитный абонемент в тренажёрный зал</p>
             <a href="#">подробнее</a>
           </div>
-          <div class="offers__image">
+          <div class="offers__illustration">
             <picture>
               <source media="(min-width: 1366px)" width="280" height="460" type="image/webp" srcset="img/offers-image-desktop@1x.webp 1x, img/offers-image-desktop@2x.webp 2x">
               <source media="(min-width: 768px)" width="400" height="462" type="image/webp" srcset="img/offers-image-tablet@1x.webp 1x, img/offers-image-tablet@2x.webp 2x">
