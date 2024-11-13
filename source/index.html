@@ -211,87 +211,159 @@
       </div>
 
     </section>
-    <section class="juri" data-test="juri">
-      <h2>Жюри</h2>
-      <div class="swipper">
-        <ul>
-          <li>
-            <figure>
-              <picture>
-                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pavlova@1x.webp 1x, img/juri-foto-pavlova@2x.webp 2x">
-                <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой">
-              </picture>
-              <figcaption>Анна Павлова</figcaption>
-            </figure>
-            <div>
-              <h3>Анна Павлова</h3>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit</li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <figure>
-              <picture>
-                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-lavrov@1x.webp 1x, img/juri-foto-lavrov@2x.webp 2x">
-                <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова">
-              </picture>
-              <figcaption>Алексей Лавров</figcaption>
-            </figure>
-            <div>
-              <h3>Алексей Лавров</h3>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit</li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <figure>
-              <picture>
-                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pashkov@1x.webp 1x, img/juri-foto-pashkov@2x.webp 2x">
-                <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова">
-              </picture>
-              <figcaption>Александр Пашков</figcaption>
-            </figure>
-            <div>
-              <h3>Александр Пашков</h3>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit</li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <figure>
-              <picture>
-                <source width="260" height="300" type="image/webp" srcset="img/juri-foto-ketova@1x.webp 1x, img/juri-foto-ketova@2x.webp 2x">
-                <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой">
-              </picture>
-              <figcaption>Мария Кетова</figcaption>
-            </figure>
-            <div>
-              <h3>Мария Кетова</h3>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit</li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <div>
-          <button type="button">Назад</button>
-          <button type="button">Вперед</button>
+    <section class="juri container" data-test="juri">
+      <h2 class="juri__title title title--secondary">Жюри</h2>
+      <div class="juri__slider-container">
+        <div class="juri__slider swiper">
+          <ul class="juri__list swiper-wrapper">
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pavlova@1x.webp 1x, img/juri-foto-pavlova@2x.webp 2x">
+                  <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой">
+                </picture>
+                <figcaption>Анна Павлова</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Анна Павлова</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-lavrov@1x.webp 1x, img/juri-foto-lavrov@2x.webp 2x">
+                  <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова">
+                </picture>
+                <figcaption>Алексей Лавров</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Алексей Лавров</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pashkov@1x.webp 1x, img/juri-foto-pashkov@2x.webp 2x">
+                  <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова">
+                </picture>
+                <figcaption>Александр Пашков</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Александр Пашков</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-ketova@1x.webp 1x, img/juri-foto-ketova@2x.webp 2x">
+                  <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой">
+                </picture>
+                <figcaption>Мария Кетова</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Мария Кетова</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pavlova@1x.webp 1x, img/juri-foto-pavlova@2x.webp 2x">
+                  <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой">
+                </picture>
+                <figcaption>Анна Павлова</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Анна Павлова</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-lavrov@1x.webp 1x, img/juri-foto-lavrov@2x.webp 2x">
+                  <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова">
+                </picture>
+                <figcaption>Алексей Лавров</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Алексей Лавров</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pashkov@1x.webp 1x, img/juri-foto-pashkov@2x.webp 2x">
+                  <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова">
+                </picture>
+                <figcaption>Александр Пашков</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Александр Пашков</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+            <li class="juri__item juri-person swiper-slide" tabindex="0">
+              <figure class="juri-person__illustration">
+                <picture>
+                  <source width="260" height="300" type="image/webp" srcset="img/juri-foto-ketova@1x.webp 1x, img/juri-foto-ketova@2x.webp 2x">
+                  <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой">
+                </picture>
+                <figcaption>Мария Кетова</figcaption>
+              </figure>
+              <div class="juri-person__information">
+                <h3 class="juri-person__title">Мария Кетова</h3>
+                <p class="juri-person__text">CrossFit</p>
+                <ul class="juri-person__progress-list">
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit</li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
+        <button class="juri__button juri__button--prev swiper-button-prev" type="button" aria-label="Назад"></button>
+        <button class="juri__button juri__button--next swiper-button-next" type="button" aria-label="Вперед"></button>
       </div>
 
     </section>
