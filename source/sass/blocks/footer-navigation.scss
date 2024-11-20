@@ -1,0 +1,37 @@
+.footer-navigation {
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    width: 423px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+  }
+}
+
+.footer-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 35px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.footer-navigation__link {
+  color: inherit;
+  text-decoration: none;
+}
