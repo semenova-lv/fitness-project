@@ -605,43 +605,57 @@
         <button class="reviews__button reviews__button--prev slider-button slider-button--prev" type="button" aria-label="Назад"></button>
         <button class="reviews__button reviews__button--next slider-button" type="button" aria-label="Вперед"></button>
       </div>
-
     </section>
     <div class="form-wrapper" data-test="form">
-      <section class="free-lesson">
-        <h2>Бесплатное занятие</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label for="name">
-            <span class="visually-hidden">Имя</span>
-          </label>
-          <input type="text" id="name" name="name" placeholder="Имя" pattern="^[a-zA-Zа-яА-ЯёЁ ]+$" required>
-          <label for="phone">
-            <span class="visually-hidden">Телефон</span>
-          </label>
-          <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
-          <button type="submit">Отправить</button>
-        </form>
+      <section class="form-appointment">
+        <div class="form-appointment__wrapper">
+          <h2 class="form-appointment__title title title--secondary">Бесплатное занятие</h2>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <p class="form-appointment__field-group field-group">
+              <label for="name">
+                <span class="visually-hidden">Имя</span>
+              </label>
+              <input type="text" id="name" name="name" placeholder="Имя" pattern="^[a-zA-Zа-яА-ЯёЁ ]+$" required>
+              <span class="field-group__error-text">Поле может содержать только буквы и пробелы</span>
+            </p>
+            <p class="form-appointment__field-group field-group">
+              <label for="phone">
+                <span class="visually-hidden">Телефон</span>
+              </label>
+              <input type="tel" id="phone" name="phone" placeholder="Телефон" pattern="^[0-9\W]*$" required>
+              <span class="field-group__error-text">Поле не должно содержать буквы</span>
+            </p>
+            <button class="form-appointment__button button button--primary" type="submit">Отправить</button>
+          </form>
+        </div>
+
       </section>
       <section class="contacts">
-        <h2>Контакты</h2>
-        <ul>
-          <li>
-            <h3>Адрес:</h3>
-            <address>г. Омск, ул. 60 лет Октября, 7</address>
-          </li>
-          <li>
-            <h3>График работы:</h3>
-            <p>Пн-Вс: с 8:00 до 22:00</p>
-          </li>
-          <li>
-            <h3>Телефон:</h3>
-            <a href="tel:88005555555">8 800 555-55-55</a>
-          </li>
-          <li>
-            <h3>Email:</h3>
-            <a href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
-          </li>
-        </ul>
+        <h2 class="contacts__title title title--secondary">Контакты</h2>
+        <div class="contacts__content">
+          <ul class="contacts__list">
+            <li>
+              <h3 class="contacts__item-title">Адрес:</h3>
+              <address class="contacts__information">г. Омск, ул. 60 лет Октября, 7</address>
+            </li>
+            <li>
+              <h3 class="contacts__item-title">График работы:</h3>
+              <p class="contacts__information">Пн-Вс: с 8:00 до 22:00</p>
+            </li>
+
+          </ul>
+          <ul class="contacts__list">
+            <li>
+              <h3 class="contacts__item-title">Телефон:</h3>
+              <a class="contacts__information" href="tel:88005555555">8 800 555-55-55</a>
+            </li>
+            <li>
+              <h3 class="contacts__item-title">Email:</h3>
+              <a class="contacts__information" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
+            </li>
+          </ul>
+        </div>
+
       </section>
     </div>
   </main>

@@ -1,0 +1,26 @@
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group input {
+  font-family: inherit;
+  line-height: 22px;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 3px;
+  }
+}
+
+.field-group__error-text {
+  display: none;
+  font-weight: 400;
+  color: $error-color;
+  min-height: 22px;
+}

@@ -1,0 +1,62 @@
+.form-appointment {
+  color: $white;
+  background-color: $basic-primary;
+  padding-block: 70px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1;
+  }
+}
+
+.form-appointment__wrapper {
+  padding-inline: calc((100% - 290px) / 2);
+
+  @media (min-width: $tablet-width) {
+    padding-inline: calc((100% - 440px) / 2);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-inline: 103px;
+  }
+}
+
+.form-appointment__title {
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 54px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.form-appointment form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 36px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+}
+
+.form-appointment__field-group {
+  margin: 0;
+}
+
+.form-appointment__button {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    padding: 25px;
+  }
+}
