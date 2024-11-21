@@ -93,13 +93,15 @@
 }
 
 .about__illustration {
-  width: 100%;
+  width: 320px;
   height: 280px;
+  margin: 0 auto;
   margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
     height: 345px;
-    margin: 0 auto;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -108,18 +110,13 @@
   }
 }
 
-.about__illustration img {
-  width: 100%;
-  object-fit: cover;
-}
-
 .about__video {
-  width: 100%;
-  min-height: 170px;
+  width: 320px;
+  height: 170px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 270px;
-    margin: 0 auto;
     margin-top: -85px;
   }
 
@@ -129,9 +126,4 @@
     height: 230px;
     margin-top: -115px;
   }
-}
-
-.about__video img {
-  width: 100%;
-  object-fit: cover;
 }
