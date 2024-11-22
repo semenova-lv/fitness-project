@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+// import 'swiper/css';
 import {Navigation} from 'swiper/modules';
 
 const slider = new Swiper('.juri__slider', {

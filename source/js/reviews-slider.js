@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+// import 'swiper/css';
 import {Navigation} from 'swiper/modules';
 
 const reviewsSlider = new Swiper('.reviews__slider', {

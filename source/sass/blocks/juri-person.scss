@@ -85,12 +85,16 @@
   left: -16px;
 }
 
-.juri-person:focus .juri-person__information {
+// @media (min-width: $desktop-width) {
+//   .juri-person:hover .juri-person__information {
+//     display: block;
+//   }
+// }
+
+.juri-person:hover .juri-person__information {
   display: block;
 }
 
-@media (min-width: $desktop-width) {
-  .juri-person:hover .juri-person__information {
-    display: block;
-  }
+.juri-person:focus .juri-person__information {
+  display: block;
 }

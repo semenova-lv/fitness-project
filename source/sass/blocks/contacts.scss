@@ -117,3 +117,23 @@
     line-height: 22px;
   }
 }
+
+.contacts__list a:hover {
+  color: rgba(28, 51, 116, 0.5);
+}
+
+
+.contacts__list a:active {
+  color: $basic-secondary;
+  position: relative;
+}
+
+.contacts__list a:active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: $basic-secondary;
+  bottom: -1px;
+}

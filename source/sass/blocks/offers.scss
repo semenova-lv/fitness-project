@@ -62,18 +62,18 @@
 }
 
 .offers__main-information {
-  padding: 30px calc((100% - 260px) / 2) 29px;
+  padding: 30px calc((100% - 260px) / 2) 31px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 25px;
+    padding: 40px 25px 45px;
     text-align: start;
     display: flex;
     flex-direction: column;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 45px;
+    padding: 40px 45px 45px;
   }
 
   h3 {
@@ -132,12 +132,53 @@
   text-transform: uppercase;
   line-height: 14px;
   font-weight: 700;
-  padding-bottom: 5px;
-  border-bottom: 1px solid currentColor;
+  position: relative;
   width: fit-content;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    position: absolute;
+    bottom: -5px;
+  }
+
+  &--other::after {
+    background-color: #74819c;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
+  }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:focus-visible {
+    border: none;
+    outline: 1px solid currentColor;
+    outline-offset: 10px;
+  }
+
+  &:focus-visible::after {
+    display: none;
+  }
+
+  &:active {
+    opacity: 100%;
+  }
+
+  &:active::after {
+    display: block;
+    background-color: currentColor;
+  }
+
+  &--disabled {
+    opacity: 50%;
+    pointer-events: none;
   }
 }
 
@@ -186,6 +227,7 @@
 
 .offers__item {
   padding: 20px;
+  padding-bottom: 26px;
   border: 7px solid transparent;
   background:
     linear-gradient($white, $white) padding-box,

@@ -1,12 +1,14 @@
 .card-product {
-  padding: 50px 42px;
+  // padding: 50px 42px;
+  padding: 43px 35px;
+  border: 7px solid transparent;
   background-color: $white;
   display: flex;
   flex-direction: column;
   row-gap: 18px;
 
   @media (min-width: $tablet-width) {
-    padding: 65px;
+    padding: 58px;
     row-gap: 22px;
   }
 
@@ -14,6 +16,20 @@
     min-width: 230px;
     row-gap: 17px;
   }
+
+  &:hover,
+  &:has(.card-product__button:focus-visible) {
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 7;
+  }
+}
+
+.card-product:hover .card-product__button {
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  background-color: $basic-primary;
+  color: $white;
+  border: none;
+  padding: 27px;
 }
 
 .card-product__title {
@@ -35,26 +51,17 @@
   margin: 0;
 }
 
-// .card-product__price-wrapper {
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: 1fr;
-//   align-items: end;
-// }
-
 .card-product__price {
   margin: 0;
   color: $text-accent;
   font-size: 48px;
   line-height: 72px;
   font-weight: 700;
-
-  // grid-area: 1 / 1;
   min-height: 120px;
   display: flex;
   column-gap: 10px;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   z-index: 3;
   position: relative;
 
@@ -98,19 +105,21 @@
   }
 }
 
-// .card-product__price-wrapper span {
-//   grid-area: 1 / 1;
-//   color: rgba(232, 232, 232, 0.48);
-//   font-size: 80px;
-//   line-height: 120px;
-//   font-weight: 700;
+.card-product__button {
+  &:not(:disabled):hover {
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    background-color: $basic-primary;
+    color: $white;
+    border: none;
+    padding: 27px;
+  }
 
-//   @media (min-width: $tablet-width) {
-//     font-size: 100px;
-//     line-height: 150px;
-//   }
-// }
+  &:not(:disabled):active {
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    background-color: $basic-primary;
+    color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 27px;
+  }
+}
 
-// .card-product__button {
-
-// }

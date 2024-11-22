@@ -75,9 +75,13 @@
 
 // }
 
-.price__filter-link {
+.price__filter-button {
   color: rgba(16, 38, 84, 0.5);
   text-decoration: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -94,18 +98,53 @@
     line-height: 20px;
   }
 
-  &--current {
-    color: $basic-primary;
-  }
-
-  &--current::before {
+  &::before {
     content: "";
     display: block;
     height: 2px;
     width: 100%;
     position: absolute;
-    background-color: $btn-special-color;
+    background-color: transparent;
     bottom: -7px;
+  }
+
+  &--current {
+    color: $basic-primary;
+  }
+
+  &--current::before {
+    background-color: $btn-special-color;
+  }
+
+  &:not(:disabled):hover {
+    color: rgba(16, 38, 84, 0.7);
+  }
+
+  &:not(:disabled):hover::before {
+    background-color: #787878;
+  }
+
+  &:not(:disabled):focus-visible {
+    color: $basic-primary;
+    outline: none;
+  }
+
+  &:not(:disabled):focus-visible::before {
+    background-color: $basic-primary;
+  }
+
+  &:not(:disabled):active {
+    color: $basic-primary;
+  }
+
+  &:not(:disabled):active::before {
+    background-color: $bg-banner-color;
+  }
+
+  &:disabled {
+    color: $basic-primary;
+    opacity: 30%;
+    cursor: default;
   }
 }
 

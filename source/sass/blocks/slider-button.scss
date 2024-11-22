@@ -30,4 +30,28 @@
   &--prev::before {
     transform: rotate(180deg);
   }
+
+  &:not(:disabled):hover {
+    outline: 1px solid $basic-primary;
+    outline-offset: -1px;
+  }
+
+  &:not(:disabled):focus-visible {
+    outline: 1px solid $basic-primary;
+    outline-offset: -1px;
+    background-color: #e8e8e8;
+  }
+
+  &:not(:disabled):active {
+    background-color: $basic-primary;
+  }
+
+  &:not(:disabled):active::before {
+    background-color: $white;
+  }
+
+  &:disabled {
+    opacity: 30%;
+    cursor: default;
+  }
 }

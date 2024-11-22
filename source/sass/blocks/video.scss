@@ -97,6 +97,7 @@
 
   &:not(:disabled):focus-visible {
     border-color: $basic-primary;
+    outline: none;
   }
 
   &:not(:disabled):focus-visible::before {

@@ -11,9 +11,9 @@
   }
 }
 
-.faq__wrapper {
+// .faq__wrapper {
 
-}
+// }
 
 .faq__title {
   margin: 0;
@@ -69,15 +69,18 @@
   line-height: 16px;
   font-weight: 400;
   width: 100%;
-  padding: 14px;
+  padding: 15px;
   color: $basic-primary;
   background-color: transparent;
-  border: 1px solid rgba(16, 38, 84, 0.2);
+  border: none;
+  cursor: pointer;
+  outline: 1px solid rgba(16, 38, 84, 0.2);
+  outline-offset: -1px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 18px;
-    padding: 17px;
+    padding: 18px;
   }
 
   @media (min-width: $desktop-width) {
@@ -90,16 +93,30 @@
     color: $white;
     background-color: $basic-primary;
     background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-    border: none;
-    padding: 15px;
+    outline: none;
+  }
 
-    @media (min-width: $tablet-width) {
-      padding: 18px;
-    }
+  &:not(:disabled):hover,
+  &:not(:disabled):focus-visible {
+    outline-color: $basic-primary;
+  }
 
-    @media (min-width: $desktop-width) {
-      padding-block: 18px 15px;
-    }
+  &:not(:disabled):active {
+    outline: none;
+    color: $white;
+    background-color: $basic-primary;
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  }
+
+  &--active:not(:disabled):hover,
+  &--active:not(:disabled):focus-visible {
+    background-image: linear-gradient(97.05deg, rgba(237, 2, 51, 0.8) 17.6%, rgba(0, 62, 183, 0.8) 95.31%);
+  }
+
+  &:disabled {
+    color: #c8c9cc;
+    outline-color: rgba(16, 38, 84, 0.2);
+    cursor: default;
   }
 }
 
@@ -230,6 +247,7 @@
   border: 1px solid $basic-secondary;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 
   grid-area: 1 / 1;
   justify-self: end;
@@ -273,5 +291,27 @@
   &--open::before {
     mask-image: url("/__spritemap#sprite-icon-minus-view");
     background-color: $white;
+  }
+
+  &:not(:disabled):hover {
+    background-color: $basic-secondary;
+  }
+
+  &:not(:disabled):hover::before {
+    background-color: $white;
+  }
+
+  &:not(:disabled):focus {
+    background-color: #74819c;
+    outline: none;
+  }
+
+  &:not(:disabled):focus::before {
+    background-color: $white;
+  }
+
+  &:disabled {
+    opacity: 30%;
+    cursor: default;
   }
 }
