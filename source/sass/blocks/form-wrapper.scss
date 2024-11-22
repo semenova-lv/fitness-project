@@ -1,0 +1,9 @@
+.form-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
+    padding-inline: calc((100% - 1366px) / 2);
+    background-image: linear-gradient(to right, $basic-primary 50%, $white 50%);
+  }
+}

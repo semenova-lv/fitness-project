@@ -2,3 +2,38 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper-bundle";
+
+/* GLOBAL */
+@import "./common/variables";
+@import "./common/global";
+@import "./common/fonts";
+@import "./common/visually-hidden";
+@import "./common/container";
+
+/* BLOCKS */
+@import "./blocks/page";
+@import "./blocks/title";
+@import "./blocks/button";
+@import "./blocks/slider-button";
+@import "./blocks/page-header";
+@import "./blocks/logo";
+@import "./blocks/hero";
+@import "./blocks/about";
+@import "./blocks/video";
+@import "./blocks/price";
+@import "./blocks/card-product";
+@import "./blocks/games";
+@import "./blocks/juri";
+@import "./blocks/juri-person";
+@import "./blocks/features";
+@import "./blocks/offers";
+@import "./blocks/faq";
+@import "./blocks/reviews";
+@import "./blocks/form-wrapper";
+@import "./blocks/form-appointment";
+@import "./blocks/field-group";
+@import "./blocks/contacts";
+@import "./blocks/page-footer";
+@import "./blocks/footer-navigation";
+@import "./blocks/social";

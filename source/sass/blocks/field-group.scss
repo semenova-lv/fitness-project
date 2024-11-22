@@ -1,0 +1,55 @@
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group__input {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 22px;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 3px;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    border-color: #74819c;
+  }
+
+  &:not(:disabled):hover {
+    border-color: $white;
+  }
+
+  &:not(:disabled):focus {
+    border: none;
+    padding: 0;
+    outline: 1px solid $white;
+    outline-offset: 5px;
+  }
+
+  &:not(:focus):not(:placeholder-shown):invalid {
+    border-color: $error-color;
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.field-group__error-text {
+  display: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $error-color;
+  min-height: 22px;
+}

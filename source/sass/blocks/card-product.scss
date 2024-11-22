@@ -1,0 +1,125 @@
+.card-product {
+  // padding: 50px 42px;
+  padding: 43px 35px;
+  border: 7px solid transparent;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px;
+    row-gap: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 230px;
+    row-gap: 17px;
+  }
+
+  &:hover,
+  &:has(.card-product__button:focus-visible) {
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 7;
+  }
+}
+
+.card-product:hover .card-product__button {
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  background-color: $basic-primary;
+  color: $white;
+  border: none;
+  padding: 27px;
+}
+
+.card-product__title {
+  margin: 0;
+  font-size: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.card-product__information {
+  margin: 0;
+}
+
+.card-product__price {
+  margin: 0;
+  color: $text-accent;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  min-height: 120px;
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 3;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 90px;
+    column-gap: 14px;
+    min-height: 150px;
+  }
+
+  &::before {
+    content: attr(data-value);
+    display: block;
+    color: rgba(232, 232, 232, 0.48);
+    font-size: 80px;
+    line-height: 120px;
+    font-weight: 700;
+    position: absolute;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      font-size: 100px;
+      line-height: 150px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 72px;
+    background-image: url("/__spritemap#sprite-icon-rub-view");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 90px;
+    }
+  }
+}
+
+.card-product__button {
+  &:not(:disabled):hover {
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    background-color: $basic-primary;
+    color: $white;
+    border: none;
+    padding: 27px;
+  }
+
+  &:not(:disabled):active {
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    background-color: $basic-primary;
+    color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 27px;
+  }
+}
+
