@@ -40,6 +40,7 @@
 
   &--vk::before {
     mask-image: url("/__spritemap#sprite-icon-vk-view");
+    mask-size: 13px 8px;
   }
 
   &--ok::before {
@@ -48,6 +49,7 @@
 
   &--reddit::before {
     mask-image: url("/__spritemap#sprite-icon-reddit-view");
+    mask-size: 14px 14px;
   }
 
   &:hover {
