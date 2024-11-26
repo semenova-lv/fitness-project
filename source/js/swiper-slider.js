@@ -1,10 +1,10 @@
 import Swiper from 'swiper';
-// import 'swiper/css';
 import {Navigation} from 'swiper/modules';
 
-const slider = new Swiper('.juri__slider', {
+const juruSlider = new Swiper('.juri__slider', {
   modules: [Navigation],
   loop: 'true',
+  spaceBetween: 40,
 
   navigation: {
     nextEl: '.juri__button--next',
@@ -17,13 +17,23 @@ const slider = new Swiper('.juri__slider', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 40,
     },
     1366: {
       slidesPerView: 4,
-      spaceBetween: 40,
     }
   },
 });
 
-export {slider};
+const reviewsSlider = new Swiper('.reviews__slider', {
+  modules: [Navigation],
+  slidesPerView: 1,
+
+  navigation: {
+    nextEl: '.reviews__button--next',
+    prevEl: '.reviews__button--prev'
+  },
+});
+
+
+juruSlider.slideReset();
+reviewsSlider.slideReset();

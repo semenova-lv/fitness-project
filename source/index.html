@@ -7,6 +7,10 @@
   <title>SUPERGYM</title>
   <!-- <link rel="stylesheet" href="sass/vendor/swiper-bundle.css"> -->
   <link rel="stylesheet" href="sass/style.scss">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -83,17 +87,17 @@
         <h2 class="price__title title title--secondary">Абонементы</h2>
         <ul class="price__filter-list">
           <li class="price__filter-item">
-            <button class="price__filter-button price__filter-button--current" type="button">1 месяц</button>
+            <button class="price__filter-button price__filter-button--current" type="button" data-tab="one">1 месяц</button>
           </li>
           <li class="price__filter-item">
-            <button class="price__filter-button" type="button">6 месяцев</button>
+            <button class="price__filter-button" type="button" data-tab="six">6 месяцев</button>
           </li>
           <li class="price__filter-item">
-            <button class="price__filter-button" type="button">12 месяцев</button>
+            <button class="price__filter-button" type="button" data-tab="twelv">12 месяцев</button>
           </li>
         </ul>
         <div class="price__content">
-          <ul class="price__product-list price__product-list--show">
+          <ul class="price__product-list price__product-list--show" data-id="one">
             <li class="price__product-item card-product">
               <h3 class="card-product__title">С тренером</h3>
               <p class="card-product__information">12 занятий</p>
@@ -113,7 +117,7 @@
               <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
             </li>
           </ul>
-          <ul class="price__product-list">
+          <ul class="price__product-list" data-id="six">
             <li class="price__product-item card-product">
               <h3 class="card-product__title">С тренером</h3>
               <p class="card-product__information">12 занятий</p>
@@ -133,7 +137,7 @@
               <a class="card-product__button button button--secondary" href="#">Купить абонемент</a>
             </li>
           </ul>
-          <ul class="price__product-list">
+          <ul class="price__product-list" data-id="twelv">
             <li class="price__product-item card-product">
               <h3 class="card-product__title">С тренером</h3>
               <p class="card-product__information">12 занятий</p>
@@ -436,107 +440,140 @@
         <div class="faq__wrapper-tab">
           <ul class="faq__tab-navigation">
             <li>
-              <button class="faq__tab-button faq__tab-button--active" type="button">Центр</button>
+              <button class="faq__tab-button faq__tab-button--active" type="button" data-tab="center">Центр</button>
             </li>
             <li>
-              <button class="faq__tab-button" type="button">Абонемент</button>
+              <button class="faq__tab-button" type="button" data-tab="subscription">Абонемент</button>
             </li>
             <li>
-              <button class="faq__tab-button" type="button">Услуги</button>
+              <button class="faq__tab-button" type="button" data-tab="services">Услуги</button>
             </li>
             <li>
-              <button class="faq__tab-button" type="button">Правила</button>
+              <button class="faq__tab-button" type="button" data-tab="rules">Правила</button>
             </li>
           </ul>
           <div class="faq__tab-content">
-            <ul class="faq__list faq__list--show">
+            <ul class="faq__list faq__list--show" data-id="center">
               <li class="faq__item">
-
                 <h3>Как стать членом <span>фитнес-центра?</span></h3>
-                <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. При&nbsp;покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн и&nbsp;договор придет вам на почту.</p>
+                <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="true"></button>
+                <div>
+                  <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и&nbsp;подписать договор. При&nbsp;покупке абонемента онлайн, анкета также&nbsp;заполняется онлайн и&nbsp;договор придет вам на почту.</p>
+                </div>
 
-                <button class="faq__button-toggle faq__button-toggle--open" type="button" aria-label="Показать/скрыть ответ" aria-expanded="true"></button>
               </li>
               <li class="faq__item">
                 <h3>Где можно посмотреть расписание?</h3>
-                <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                </div>
+
               </li>
               <li class="faq__item">
                 <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
+
               </li>
               <li class="faq__item">
                 <h3>Сколько тренеров работает в клубе и какова их&nbsp;квалификация?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
             </ul>
-            <ul class="faq__list">
+            <ul class="faq__list" data-id="subscription">
               <li class="faq__item">
                 <h3>Занятия с тренером входят в абонемент?</h3>
-                <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-                <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="true"></button>
+                <div>
+                  <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Можно ли заморозить абонемент?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Что такое семейный доступ и доступ для друзей?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
             </ul>
-            <ul class="faq__list">
+            <ul class="faq__list" data-id="services">
               <li class="faq__item">
                 <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
-                <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
-                <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="true"></button>
+                <div>
+                  <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Можно ли приобрести в центре спортивное питание?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Есть ли в центре детская комната?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
             </ul>
-            <ul class="faq__list">
+            <ul class="faq__list" data-id="rules">
               <li class="faq__item">
                 <h3>Есть в фитнес-центре дресс-код?</h3>
-                <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
-                <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="true"></button>
+                <div>
+                  <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Можно ли приводить с собой детей на тренировки?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Какие дополнительные правила посещения центра?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
               <li class="faq__item">
                 <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
-                <p>Здесь будет ответ</p>
                 <button class="faq__button-toggle" type="button" aria-label="Показать/скрыть ответ" aria-expanded="false"></button>
+                <div>
+                  <p>Здесь будет ответ</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -584,20 +621,20 @@
       <section class="form-appointment">
         <div class="form-appointment__wrapper">
           <h2 class="form-appointment__title title title--secondary">Бесплатное занятие</h2>
-          <form action="https://echo.htmlacademy.ru" method="post">
+          <form action="https://echo.htmlacademy.ru" method="post" novalidate>
             <p class="form-appointment__field-group field-group">
               <label for="name">
                 <span class="visually-hidden">Имя</span>
               </label>
               <input class="field-group__input" type="text" id="name" name="name" placeholder="Имя" pattern="^[a-zA-Zа-яА-ЯёЁ ]+$" required>
-              <span class="field-group__error-text">Поле может содержать только буквы и пробелы</span>
+              <span class="field-group__error-text" id="name-error"></span>
             </p>
             <p class="form-appointment__field-group field-group">
               <label for="phone">
                 <span class="visually-hidden">Телефон</span>
               </label>
               <input class="field-group__input" type="tel" id="phone" name="phone" placeholder="Телефон" pattern="^[^a-zA-Zа-яА-яёЁ]*$" required>
-              <span class="field-group__error-text">Поле не должно содержать буквы</span>
+              <span class="field-group__error-text" id="phone-error"></span>
             </p>
             <button class="form-appointment__button button button--primary" type="submit">Отправить</button>
           </form>
@@ -686,7 +723,7 @@
   </footer>
 
   <!-- <script src="js/vendor/swiper-bundle.js"></script> -->
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/main.js" defer></script>
 </body>
 
 </html>

@@ -1,3 +1,7 @@
-import {slider} from './juri-slider';
-import {reviewsSlider} from './reviews-slider';
-
+import './swiper-slider';
+import './juri';
+import './price';
+import './faq';
+import './accordeon';
+import './video';
+import './validation-form';
