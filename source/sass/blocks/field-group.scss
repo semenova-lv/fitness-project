@@ -9,14 +9,14 @@
   line-height: 22px;
   width: 100%;
   padding: 0;
-  padding-bottom: 4px;
+  padding-block: 5px 4px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   background-color: transparent;
   color: $white;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 3px;
+    // padding-bottom: 3px;
   }
 
   &::placeholder {
@@ -30,12 +30,16 @@
 
   &:not(:disabled):focus {
     border: none;
-    padding: 0;
+
+    padding-block: 5px;
     outline: 1px solid $white;
-    outline-offset: 5px;
   }
 
-  &:not(:focus):not(:placeholder-shown):invalid {
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &--invalid {
     border-color: $error-color;
   }
 
@@ -46,7 +50,6 @@
 }
 
 .field-group__error-text {
-  display: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;

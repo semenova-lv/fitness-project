@@ -141,32 +141,18 @@
   padding-block: 20px;
   border-bottom: 1px solid #74819c;
   display: grid;
-
-  // grid-template-columns: 1fr min-content;
-  // column-gap: 22px;
   align-items: center;
   grid-template-columns: 1fr;
-  row-gap: 20px;
 
   @media (min-width: $tablet-width) {
     column-gap: 78px;
     padding-block: 23px;
-
-    row-gap: 10px;
   }
 
   @media (min-width: $desktop-width) {
     padding-block: 23px 22px;
     column-gap: 160px;
-
-    row-gap: 23px;
   }
-
-  // div {
-  //   display: flex;
-  //   flex-direction: column;
-  //   row-gap: 20px;
-  // }
 
   h3 {
     margin: 0;
@@ -200,12 +186,16 @@
     }
   }
 
+  div {
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding-top: 0;
+  }
+
   p {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
-    display: none;
-
     max-width: 238px;
 
     @media (min-width: $tablet-width) {
@@ -234,8 +224,17 @@
   }
 }
 
-.faq__item:has(.faq__button-toggle--open) p {
-  display: block;
+.faq__item:has(.faq__button-toggle--open) div {
+  padding-top: 20px;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 23px;
+  }
 }
 
 .faq__button-toggle {
@@ -279,8 +278,6 @@
   }
 
   &--open {
-    // align-self: start;
-    // margin-top: 5px;
     background-color: $basic-secondary;
 
     @media (min-width: $tablet-width) {
@@ -290,7 +287,12 @@
 
   &--open::before {
     mask-image: url("/__spritemap#sprite-icon-minus-view");
+    mask-size: 14px 2px;
     background-color: $white;
+
+    @media (min-width: $tablet-width) {
+      mask-size: 20px 2px;
+    }
   }
 
   &:not(:disabled):hover {

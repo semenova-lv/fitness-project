@@ -18,7 +18,7 @@
   }
 
   &:hover,
-  &:has(.card-product__button:focus-visible) {
+  &:has(.card-product__button:focus) {
     border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 7;
   }
@@ -95,12 +95,13 @@
     height: 72px;
     background-image: url("/__spritemap#sprite-icon-rub-view");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 24px 33px;
     background-position: center;
 
     @media (min-width: $tablet-width) {
       width: 30px;
       height: 90px;
+      background-size: 30px 42px;
     }
   }
 }
