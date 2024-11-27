@@ -238,25 +238,39 @@
 }
 
 .faq__button-toggle {
+  grid-area: 1 / 1;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+
   margin: 0;
-  width: 30px;
-  height: 30px;
   padding: 0;
   background-color: transparent;
-  border: 1px solid $basic-secondary;
-  border-radius: 50%;
-  position: relative;
   cursor: pointer;
+  position: relative;
 
-  grid-area: 1 / 1;
-  justify-self: end;
-
-  @media (min-width: $tablet-width) {
-    width: 40px;
-    height: 40px;
-  }
+  border: none;
 
   &::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $basic-secondary;
+    border-radius: 50%;
+    background-color: transparent;
+
+    transition: background-color 0.3s ease;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
     content: "";
     display: block;
     width: 14px;
@@ -268,16 +282,18 @@
     mask-position: center;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 8px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.4s ease, mask-image 0.4s ease;
 
     @media (min-width: $tablet-width) {
       width: 20px;
       height: 20px;
+      right: 10px;
     }
   }
 
-  &--open {
+  &--open::before {
     background-color: $basic-secondary;
 
     @media (min-width: $tablet-width) {
@@ -285,30 +301,43 @@
     }
   }
 
-  &--open::before {
+  &--open::after {
     mask-image: url("/__spritemap#sprite-icon-minus-view");
     mask-size: 14px 2px;
     background-color: $white;
+    transform: translateY(-50%) rotate(180deg);
+    transition: transform 0.4s ease, mask-image 0.4s ease;
 
     @media (min-width: $tablet-width) {
       mask-size: 20px 2px;
     }
   }
 
-  &:not(:disabled):hover {
+  &:not(:disabled):hover::before {
     background-color: $basic-secondary;
   }
 
-  &:not(:disabled):hover::before {
+  &:not(:disabled):hover::after {
     background-color: $white;
   }
 
+  &--open:not(:disabled):hover::before {
+    background-color: $white;
+  }
+
+  &--open:not(:disabled):hover::after {
+    background-color: $basic-secondary;
+  }
+
   &:not(:disabled):focus {
-    background-color: #74819c;
     outline: none;
   }
 
   &:not(:disabled):focus::before {
+    background-color: #74819c;
+  }
+
+  &:not(:disabled):focus::after {
     background-color: $white;
   }
 
