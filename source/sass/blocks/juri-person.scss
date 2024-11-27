@@ -34,12 +34,13 @@
 
 .juri-person__information {
   grid-area: 1 / 1;
-
   display: none;
   box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
   background-color: rgba(16, 38, 84, 0.89);
   color: $white;
   padding: 45px 40px;
+  height: 100%;
+  overflow: auto;
 }
 
 .juri-person__title {
@@ -60,7 +61,7 @@
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
-  font-weight: 400px;
+  font-weight: 400;
   text-align: start;
   padding-left: 16px;
   width: 160px;
@@ -87,12 +88,25 @@
 
 // @media (min-width: $desktop-width) {
 //   .juri-person:hover .juri-person__information {
-//     display: block;
+//     // display: block;
+//     opacity: 1;
 //   }
 // }
 
 .juri-person:hover .juri-person__information {
   display: block;
+}
+
+.juri-person:hover figcaption {
+  display: none;
+}
+
+.juri-person:focus {
+  outline: none;
+}
+
+.juri-person:focus figcaption {
+  display: none;
 }
 
 .juri-person:focus .juri-person__information {
