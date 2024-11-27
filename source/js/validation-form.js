@@ -1,7 +1,7 @@
 const ErrorMessage = {
   ISREQUIRED: 'Поле обязательно для заполнения',
   ERROR_NAME: 'Поле может содержать только буквы и пробелы',
-  ERROR_PHONE: 'Поле не должно содержать буквы'
+  ERROR_PHONE: 'Поле может содержать только цифры и символы + - ( )',
 };
 
 const formAppointment = document.querySelector('.form-appointment form');

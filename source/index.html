@@ -633,7 +633,7 @@
               <label for="phone">
                 <span class="visually-hidden">Телефон</span>
               </label>
-              <input class="field-group__input" type="tel" id="phone" name="phone" placeholder="Телефон" pattern="^[^a-zA-Zа-яА-яёЁ]*$" required>
+              <input class="field-group__input" type="tel" id="phone" name="phone" placeholder="Телефон" pattern="\+?[0-9\s\-\(\)]+" required>
               <span class="field-group__error-text" id="phone-error"></span>
             </p>
             <button class="form-appointment__button button button--primary" type="submit">Отправить</button>
