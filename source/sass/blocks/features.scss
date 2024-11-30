@@ -45,7 +45,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: row dense;
     gap: 80px 40px;
-    align-items: start;
   }
 
   li {
@@ -85,7 +84,7 @@
   padding-inline: 30px;
 
   b {
-    background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+    background: $text-gradient;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: flex;
@@ -204,6 +203,7 @@
   .features__list-content li:nth-child(5n-4),
   .features__list-content li:nth-child(5n-3) {
     position: relative;
+    align-self: end;
 
     &::before {
       content: "";

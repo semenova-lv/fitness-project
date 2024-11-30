@@ -15,17 +15,15 @@
   background-color: transparent;
   color: $white;
 
-  @media (min-width: $tablet-width) {
-    // padding-bottom: 3px;
-  }
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.7);
-    border-color: #74819c;
+    border-color: $color-light-grey;
   }
 
   &:not(:disabled):hover {
     border-color: $white;
+    transition: border-color 0.4s ease;
   }
 
   &:not(:disabled):focus {

@@ -173,9 +173,11 @@
   }
 }
 
-// .games__illustration {
-
-// }
+.games__illustration {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+}
 
 .games__illustration img {
   display: block;

@@ -13,6 +13,9 @@
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+    transition: outline-color 0.2s ease;
   }
 
   &::before {
@@ -32,14 +35,14 @@
   }
 
   &:not(:disabled):hover {
-    outline: 1px solid $basic-primary;
-    outline-offset: -1px;
+    outline-color: $basic-primary;
+    transition: outline-color 0.4s ease;
   }
 
   &:not(:disabled):focus-visible {
-    outline: 1px solid $basic-primary;
-    outline-offset: -1px;
+    outline-color: $basic-primary;
     background-color: #e8e8e8;
+    transition: outline-color 0.4s ease, background-color 0.4s ease;
   }
 
   &:not(:disabled):active {

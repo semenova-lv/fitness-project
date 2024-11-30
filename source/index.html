@@ -11,6 +11,12 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" as="font" href="fonts/AlumniSans/AlumniSans-SemiBold.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/AlumniSans/AlumniSans-ExtraBold.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/RobotoCondensed/RobotoCondensed-Light.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/RobotoCondensed/RobotoCondensed-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="fonts/RobotoCondensed/RobotoCondensed-Bold.woff2" type="font/woff2" crossorigin="anonymous">
+  <!-- <link rel="preload" as="image" href="img/hero-image-desktop@1x.webp" media="(min-width: 1366px)" type="image/webp"> -->
 </head>
 
 <body class="page__body">
@@ -43,7 +49,7 @@
             <source media="(min-width: 1366px)" width="500" height="524" type="image/webp" srcset="img/hero-image-desktop@1x.webp 1x, img/hero-image-desktop@2x.webp 2x">
             <source width="324" height="390" type="image/webp" srcset="img/hero-image-tablet@1x.webp 1x, img/hero-image-tablet@2x.webp 2x">
             <source media="(min-width: 1366px)" width="500" height="524" type="image/jpeg" srcset="img/hero-image-desktop@1x.jpg 1x, img/hero-image-desktop@2x.jpg 2x">
-            <img src="img/hero-image-tablet@1x.jpg" srcset="img/hero-image-tablet@2x.jpg 2x" width="324" height="390" alt="Фото спортивного мужчины">
+            <img src="img/hero-image-tablet@1x.jpg" srcset="img/hero-image-tablet@2x.jpg 2x" width="324" height="390" alt="Фото спортивного мужчины" loading="eager">
           </picture>
         </div>
       </div>
@@ -64,7 +70,7 @@
           <source width="320" height="280" type="image/webp" srcset="img/about-image-mobile@1x.webp 1x, img/about-image-mobile@2x.webp 2x">
           <source media="(min-width: 1366px)" width="660" height="400" type="image/jpeg" srcset="img/about-image-desktop@1x.jpg 1x, img/about-image-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" width="678" height="345" type="image/jpeg" srcset="img/about-image-tablet@1x.jpg 1x, img/about-image-tablet@2x.jpg 2x">
-          <img src="img/about-image-mobile@1x.jpg" srcset="img/about-image-mobile@2x.jpg 2x" width="320" height="280" alt="Фото тренажерного зала">
+          <img src="img/about-image-mobile@1x.jpg" srcset="img/about-image-mobile@2x.jpg 2x" width="320" height="280" alt="Фото тренажерного зала" loading="lazy">
         </picture>
       </div>
       <div class="about__video video">
@@ -75,7 +81,7 @@
             <source width="320" height="170" type="image/webp" srcset="img/about-video-mobile@1x.webp 1x, img/about-video-mobile@2x.webp 2x">
             <source media="(min-width: 1366px)" width="360" height="230" type="image/jpeg" srcset="img/about-video-desktop@1x.jpg 1x, img/about-video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" width="270" height="170" type="image/jpeg" srcset="img/about-video-tablet@1x.jpg 1x, img/about-video-tablet@2x.jpg 2x">
-            <img src="img/about-video-mobile@1x.jpg" srcset="img/about-video-mobile@2x.jpg 2x" width="320" height="170" alt="Заставка видео из тренажерного зала">
+            <img src="img/about-video-mobile@1x.jpg" srcset="img/about-video-mobile@2x.jpg 2x" width="320" height="170" alt="Заставка видео из тренажерного зала" loading="lazy">
           </picture>
         </div>
 
@@ -189,7 +195,7 @@
             <source width="290" height="290" type="image/webp" srcset="img/games-image-mobile@1x.webp 1x, img/games-image-mobile@2x.webp 2x">
             <source media="(min-width: 1366px)" width="660" height="500" type="image/jpeg" srcset="img/games-image-desktop@1x.jpg 1x, img/games-image-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" width="378" height="348" type="image/jpeg" srcset="img/games-image-tablet@1x.jpg 1x, img/games-image-tablet@2x.jpg 2x">
-            <img src="img/games-image-mobile@1x.jpg" srcset="img/games-image-mobile@2x.jpg 2x" width="290" height="290" alt="Настроенный на победу участник">
+            <img src="img/games-image-mobile@1x.jpg" srcset="img/games-image-mobile@2x.jpg 2x" width="290" height="290" alt="Настроенный на победу участник" loading="lazy">
           </picture>
         </div>
       </div>
@@ -204,7 +210,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pavlova@1x.webp 1x, img/juri-foto-pavlova@2x.webp 2x">
-                  <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой">
+                  <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой" loading="lazy">
                 </picture>
                 <figcaption>Анна Павлова</figcaption>
               </figure>
@@ -222,7 +228,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-lavrov@1x.webp 1x, img/juri-foto-lavrov@2x.webp 2x">
-                  <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова">
+                  <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова" loading="lazy">
                 </picture>
                 <figcaption>Алексей Лавров</figcaption>
               </figure>
@@ -240,7 +246,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pashkov@1x.webp 1x, img/juri-foto-pashkov@2x.webp 2x">
-                  <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова">
+                  <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова" loading="lazy">
                 </picture>
                 <figcaption>Александр Пашков</figcaption>
               </figure>
@@ -258,7 +264,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-ketova@1x.webp 1x, img/juri-foto-ketova@2x.webp 2x">
-                  <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой">
+                  <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой" loading="lazy">
                 </picture>
                 <figcaption>Мария Кетова</figcaption>
               </figure>
@@ -276,7 +282,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pavlova@1x.webp 1x, img/juri-foto-pavlova@2x.webp 2x">
-                  <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой">
+                  <img src="img/juri-foto-pavlova@1x.jpg" srcset="img/juri-foto-pavlova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Анны Павловой" loading="lazy">
                 </picture>
                 <figcaption>Анна Павлова</figcaption>
               </figure>
@@ -294,7 +300,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-lavrov@1x.webp 1x, img/juri-foto-lavrov@2x.webp 2x">
-                  <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова">
+                  <img src="img/juri-foto-lavrov@1x.jpg" srcset="img/juri-foto-lavrov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Алексея Лаврова" loading="lazy">
                 </picture>
                 <figcaption>Алексей Лавров</figcaption>
               </figure>
@@ -312,7 +318,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-pashkov@1x.webp 1x, img/juri-foto-pashkov@2x.webp 2x">
-                  <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова">
+                  <img src="img/juri-foto-pashkov@1x.jpg" srcset="img/juri-foto-pashkov@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Александра Пашкова" loading="lazy">
                 </picture>
                 <figcaption>Александр Пашков</figcaption>
               </figure>
@@ -330,7 +336,7 @@
               <figure class="juri-person__illustration">
                 <picture>
                   <source width="260" height="300" type="image/webp" srcset="img/juri-foto-ketova@1x.webp 1x, img/juri-foto-ketova@2x.webp 2x">
-                  <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой">
+                  <img src="img/juri-foto-ketova@1x.jpg" srcset="img/juri-foto-ketova@2x.jpg 2x" width="260" height="300" alt="Фото члена жюри Марии Кетовой" loading="lazy">
                 </picture>
                 <figcaption>Мария Кетова</figcaption>
               </figure>
@@ -414,7 +420,7 @@
               <source width="320" height="360" type="image/webp" srcset="img/offers-image-mobile@1x.webp 1x, img/offers-image-mobile@2x.webp 2x">
               <source media="(min-width: 1366px)" width="280" height="460" type="image/jpeg" srcset="img/offers-image-desktop@1x.jpg 1x, img/offers-image-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" width="400" height="462" type="image/jpeg" srcset="img/offers-image-tablet@1x.jpg 1x, img/offers-image-tablet@2x.jpg 2x">
-              <img src="img/offers-image-mobile@1x.jpg" srcset="img/offers-image-mobile@2x.jpg 2x" width="320" height="360" alt="Фото спортивной девушки">
+              <img src="img/offers-image-mobile@1x.jpg" srcset="img/offers-image-mobile@2x.jpg 2x" width="320" height="360" alt="Фото спортивной девушки" loading="lazy">
             </picture>
           </div>
         </div>
@@ -592,7 +598,7 @@
                   <source media="(min-width: 768px)" width="80" height="80" type="image/webp" srcset="img/review-foto-tablet@1x.webp 1x, img/review-foto-tablet@2x.webp 2x">
                   <source width="68" height="68" type="image/webp" srcset="img/review-foto-mobile@1x.webp 1x, img/review-foto-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" width="80" height="80" type="image/jpeg" srcset="img/review-foto-tablet@1x.jpg 1x, img/review-foto-tablet@2x.jpg 2x">
-                  <img src="img/review-foto-mobile@1x.jpg" srcset="img/review-foto-mobile@2x.jpg 2x" width="68" height="68" alt="Фото автора отзыва Анна Орлова">
+                  <img src="img/review-foto-mobile@1x.jpg" srcset="img/review-foto-mobile@2x.jpg 2x" width="68" height="68" alt="Фото автора отзыва Анна Орлова" loading="lazy">
                 </picture>
               </div>
 
@@ -605,7 +611,7 @@
                   <source media="(min-width: 768px)" width="80" height="80" type="image/webp" srcset="img/review-foto-tablet@1x.webp 1x, img/review-foto-tablet@2x.webp 2x">
                   <source width="68" height="68" type="image/webp" srcset="img/review-foto-mobile@1x.webp 1x, img/review-foto-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)" width="80" height="80" type="image/jpeg" srcset="img/review-foto-tablet@1x.jpg 1x, img/review-foto-tablet@2x.jpg 2x">
-                  <img src="img/review-foto-mobile@1x.jpg" srcset="img/review-foto-mobile@2x.jpg 2x" width="68" height="68" alt="Фото автора отзыва Анна Орлова">
+                  <img src="img/review-foto-mobile@1x.jpg" srcset="img/review-foto-mobile@2x.jpg 2x" width="68" height="68" alt="Фото автора отзыва Анна Орлова" loading="lazy">
                 </picture>
               </div>
               <h3>Анна Орлова</h3>

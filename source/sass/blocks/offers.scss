@@ -12,31 +12,29 @@
 
 .offers__wrapper {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
 
   @media (min-width: $tablet-width) {
     width: auto;
     padding-inline: calc((100% - 678px) / 2);
+    row-gap: 35px;
   }
 
   @media (min-width: $desktop-width) {
     padding-inline: calc((100% - 1160px) / 2);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+    gap: 40px;
   }
 }
 
 .offers__title {
   margin: 0;
-  margin-bottom: 40px;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
-  }
-
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
     grid-column: 1 / -1;
   }
 }
@@ -44,7 +42,6 @@
 .offers__main {
   background-color: $bg-banner-color;
   color: $white;
-  margin-bottom: 40px;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -52,12 +49,10 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 400px;
-    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 0;
   }
 }
 
@@ -146,7 +141,7 @@
   }
 
   &--other::after {
-    background-color: #74819c;
+    background-color: $color-light-grey;
   }
 
   @media (min-width: $tablet-width) {
@@ -189,6 +184,7 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     height: 462px;
+    align-self: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -210,11 +206,13 @@
   flex-direction: column;
   row-gap: 30px;
   text-align: center;
+  color: $basic-secondary;
 
   @media (min-width: $tablet-width) {
     padding-inline: 0;
     text-align: start;
     flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 30px;
   }
 
@@ -231,7 +229,7 @@
   border: 7px solid transparent;
   background:
     linear-gradient($white, $white) padding-box,
-    linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) border-box;
+    $border-gradient border-box;
 
   display: flex;
   flex-direction: column;
@@ -239,7 +237,7 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 324px;
     align-items: start;
     row-gap: 10px;
     min-height: 188px;
