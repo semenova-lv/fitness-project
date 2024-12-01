@@ -1,5 +1,4 @@
 .card-product {
-  // padding: 50px 42px;
   padding: 43px 35px;
   border: 7px solid transparent;
   background-color: $white;
@@ -13,23 +12,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 230px;
+    width: 230px;
     row-gap: 17px;
   }
 
   &:hover,
-  &:has(.card-product__button:focus-visible) {
-    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  &:has(.card-product__button:focus) {
+    border-image: $border-gradient;
     border-image-slice: 7;
   }
-}
-
-.card-product:hover .card-product__button {
-  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-  background-color: $basic-primary;
-  color: $white;
-  border: none;
-  padding: 27px;
 }
 
 .card-product__title {
@@ -49,6 +40,7 @@
 
 .card-product__information {
   margin: 0;
+  flex-grow: 1;
 }
 
 .card-product__price {
@@ -95,31 +87,13 @@
     height: 72px;
     background-image: url("/__spritemap#sprite-icon-rub-view");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 24px 33px;
     background-position: center;
 
     @media (min-width: $tablet-width) {
       width: 30px;
       height: 90px;
+      background-size: 30px 42px;
     }
   }
 }
-
-.card-product__button {
-  &:not(:disabled):hover {
-    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-    background-color: $basic-primary;
-    color: $white;
-    border: none;
-    padding: 27px;
-  }
-
-  &:not(:disabled):active {
-    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-    background-color: $basic-primary;
-    color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 27px;
-  }
-}
-

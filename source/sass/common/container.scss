@@ -1,15 +1,11 @@
 .container {
   padding: 0 calc((100% - 290px) / 2);
-}
 
-@media (min-width: $tablet-width) {
-  .container {
+  @media (min-width: $tablet-width) {
     padding: 0 calc((100% - 678px) / 2);
   }
-}
 
-@media (min-width: $desktop-width) {
-  .container {
+  @media (min-width: $desktop-width) {
     width: 1160px;
     padding: 0 103px;
     margin: 0 auto;

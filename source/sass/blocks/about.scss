@@ -107,6 +107,7 @@
   @media (min-width: $desktop-width) {
     height: 400px;
     grid-column: 2 / 3;
+    align-self: flex-end;
   }
 }
 

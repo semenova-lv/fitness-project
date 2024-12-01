@@ -26,7 +26,7 @@
 
 .form-appointment__title {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
     font-size: 54px;
@@ -42,7 +42,7 @@
 .form-appointment form {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 36px;
+  row-gap: 9px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -55,8 +55,11 @@
 }
 
 .form-appointment__button {
+  margin-top: 5px;
+
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     padding: 25px;
+    margin-top: 4px;
   }
 }

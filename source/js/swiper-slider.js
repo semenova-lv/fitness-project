@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
+import 'swiper/css';
 
 const juruSlider = new Swiper('.juri__slider', {
   modules: [Navigation],
@@ -27,6 +28,7 @@ const juruSlider = new Swiper('.juri__slider', {
 const reviewsSlider = new Swiper('.reviews__slider', {
   modules: [Navigation],
   slidesPerView: 1,
+  spaceBetween: 30,
 
   navigation: {
     nextEl: '.reviews__button--next',
@@ -35,5 +37,5 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 });
 
 
-juruSlider.slideReset();
-reviewsSlider.slideReset();
+juruSlider.init();
+reviewsSlider.init();

@@ -32,6 +32,7 @@
 
 .reviews__slider {
   width: 240px;
+  background-color: $basic-secondary;
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
 
   @media (min-width: $tablet-width) {
@@ -49,12 +50,14 @@
   list-style: none;
 }
 
-.reviews__item {
+.reviews__list .reviews__item {
   text-align: center;
   padding: 30px 25px 29px;
   background-color: $basic-secondary;
   color: $white;
   box-sizing: border-box;
+  height: 100%;
+  align-self: stretch;
 
   @media (min-width: $tablet-width) {
     text-align: start;

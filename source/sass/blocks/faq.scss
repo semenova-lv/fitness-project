@@ -11,10 +11,6 @@
   }
 }
 
-// .faq__wrapper {
-
-// }
-
 .faq__title {
   margin: 0;
   margin-bottom: 35px;
@@ -76,6 +72,7 @@
   cursor: pointer;
   outline: 1px solid rgba(16, 38, 84, 0.2);
   outline-offset: -1px;
+  transition: outline-color 0.4s ease;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
@@ -92,7 +89,7 @@
   &--active {
     color: $white;
     background-color: $basic-primary;
-    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    background-image: $btn-bg-gradient;
     outline: none;
   }
 
@@ -105,12 +102,12 @@
     outline: none;
     color: $white;
     background-color: $basic-primary;
-    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    background-image: $btn-bg-gradient;
   }
 
   &--active:not(:disabled):hover,
   &--active:not(:disabled):focus-visible {
-    background-image: linear-gradient(97.05deg, rgba(237, 2, 51, 0.8) 17.6%, rgba(0, 62, 183, 0.8) 95.31%);
+    background-image: $btn-bg-gradient-focus;
   }
 
   &:disabled {
@@ -139,34 +136,20 @@
 
 .faq__item {
   padding-block: 20px;
-  border-bottom: 1px solid #74819c;
+  border-bottom: 1px solid $color-light-grey;
   display: grid;
-
-  // grid-template-columns: 1fr min-content;
-  // column-gap: 22px;
   align-items: center;
   grid-template-columns: 1fr;
-  row-gap: 20px;
 
   @media (min-width: $tablet-width) {
     column-gap: 78px;
     padding-block: 23px;
-
-    row-gap: 10px;
   }
 
   @media (min-width: $desktop-width) {
     padding-block: 23px 22px;
     column-gap: 160px;
-
-    row-gap: 23px;
   }
-
-  // div {
-  //   display: flex;
-  //   flex-direction: column;
-  //   row-gap: 20px;
-  // }
 
   h3 {
     margin: 0;
@@ -200,12 +183,16 @@
     }
   }
 
+  div {
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding-top: 0;
+  }
+
   p {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
-    display: none;
-
     max-width: 238px;
 
     @media (min-width: $tablet-width) {
@@ -226,38 +213,61 @@
 }
 
 .faq__item:first-child {
-  border-top: 1px solid #74819c;
+  border-top: 1px solid $color-light-grey;
 
   @media (min-width: $desktop-width) {
     border-top: none;
-    box-shadow: 0 -1px 0 0 #74819c;
+    box-shadow: 0 -1px 0 0 $color-light-grey;
   }
 }
 
-.faq__item:has(.faq__button-toggle--open) p {
-  display: block;
+.faq__item:has(.faq__button-toggle--open) div {
+  padding-top: 20px;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 23px;
+  }
 }
 
 .faq__button-toggle {
+  grid-area: 1 / 1;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+
   margin: 0;
-  width: 30px;
-  height: 30px;
   padding: 0;
   background-color: transparent;
-  border: 1px solid $basic-secondary;
-  border-radius: 50%;
-  position: relative;
   cursor: pointer;
+  position: relative;
 
-  grid-area: 1 / 1;
-  justify-self: end;
-
-  @media (min-width: $tablet-width) {
-    width: 40px;
-    height: 40px;
-  }
+  border: none;
 
   &::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $basic-secondary;
+    border-radius: 50%;
+    background-color: transparent;
+
+    transition: background-color 0.3s ease;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &::after {
     content: "";
     display: block;
     width: 14px;
@@ -269,18 +279,18 @@
     mask-position: center;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 8px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.4s ease, mask-image 0.4s ease;
 
     @media (min-width: $tablet-width) {
       width: 20px;
       height: 20px;
+      right: 10px;
     }
   }
 
-  &--open {
-    // align-self: start;
-    // margin-top: 5px;
+  &--open::before {
     background-color: $basic-secondary;
 
     @media (min-width: $tablet-width) {
@@ -288,25 +298,43 @@
     }
   }
 
-  &--open::before {
+  &--open::after {
     mask-image: url("/__spritemap#sprite-icon-minus-view");
+    mask-size: 14px 2px;
     background-color: $white;
-  }
+    transform: translateY(-50%) rotate(180deg);
+    transition: transform 0.4s ease, mask-image 0.4s ease;
 
-  &:not(:disabled):hover {
-    background-color: $basic-secondary;
+    @media (min-width: $tablet-width) {
+      mask-size: 20px 2px;
+    }
   }
 
   &:not(:disabled):hover::before {
+    background-color: $basic-secondary;
+  }
+
+  &:not(:disabled):hover::after {
     background-color: $white;
   }
 
+  &--open:not(:disabled):hover::before {
+    background-color: $white;
+  }
+
+  &--open:not(:disabled):hover::after {
+    background-color: $basic-secondary;
+  }
+
   &:not(:disabled):focus {
-    background-color: #74819c;
     outline: none;
   }
 
   &:not(:disabled):focus::before {
+    background-color: $color-light-grey;
+  }
+
+  &:not(:disabled):focus::after {
     background-color: $white;
   }
 
