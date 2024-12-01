@@ -35,6 +35,7 @@
   text-align: center;
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
     grid-column: 1 / -1;
   }
 }

@@ -28,6 +28,7 @@ const juruSlider = new Swiper('.juri__slider', {
 const reviewsSlider = new Swiper('.reviews__slider', {
   modules: [Navigation],
   slidesPerView: 1,
+  spaceBetween: 30,
 
   navigation: {
     nextEl: '.reviews__button--next',
