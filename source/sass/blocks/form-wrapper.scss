@@ -5,5 +5,20 @@
     grid-auto-flow: dense;
     padding-inline: calc((100% - 1366px) / 2);
     background-image: linear-gradient(to right, $basic-primary 50%, $white 50%);
+    position: relative;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 1px;
+      background-color: $color-light-grey;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 3;
+    }
   }
 }
